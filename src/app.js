@@ -20,10 +20,6 @@ app.post("/students", (req,res)=> {
 })
 
 // get all data
-
-
-
-
 app.get("/students", async (req,res) =>{
     try{
        const studentsData = await Student.find();
@@ -34,12 +30,6 @@ app.get("/students", async (req,res) =>{
     }
 
 })
-
-
-
-
-
-
 
 app.listen(port, ()=>{
     console.log(`Node.js server is running on port ${port}`);
