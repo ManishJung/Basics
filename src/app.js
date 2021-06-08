@@ -21,6 +21,9 @@ app.post("/students", (req,res)=> {
 
 // get all data
 
+
+
+
 app.get("/students", async (req,res) =>{
     try{
        const studentsData = await Student.find();
@@ -32,20 +35,10 @@ app.get("/students", async (req,res) =>{
 
 })
 
-//Get indivisual data if asked not all
-app.get("/students/:id", async(req,res)=> {
-    try{
-        const _id = req.params.id;
-        const studentData = await Student.findById(_id);
-         res.send(studentData);
-       
 
-    }catch(e){
-        res.send(e);
 
-    }
 
-})
+
 
 
 app.listen(port, ()=>{
